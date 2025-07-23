@@ -88,10 +88,26 @@ Then, restart IIS by stopping and starting the server to apply the changes.
 <br />
 
 <p>
-<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/DQEjiOV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
+To install osTicket in IIS, start by unzipping the `osTicket-v1.15.8.zip` file. Move the "upload" folder into `C:\inetpub\wwwroot` and rename it to "osTicket".
+
+Next, open **IIS**, select the osTicket site, and use **PHP Manager** to enable the required PHP extensions:
+
+* `php_imap.dll`
+* `php_intl.dll`
+* `php_opcache.dll`
+
+Then, navigate to the `include` folder inside osTicket and rename the file `ost-config.php.dist` to `ost-config.php`.
+
+Finally, adjust the file's permissions:
+
+* Right-click the file, go to Properties > Security.
+* Disable inheritance and give Everyone full control.
+
+This allows osTicket to complete the setup during the web-based installation.
+
 </p>
 <br />
 
