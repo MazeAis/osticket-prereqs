@@ -44,13 +44,13 @@ Create your virtual machine that will run osTicket. Launch and log into the syst
 <p>
 Prepare IIS and PHP for osTicket
 
-1. Open the **"Turn Windows features on or off"** utility.
-2. Enable **Internet Information Services (IIS)** and make sure the **CGI** feature is also selected. This allows PHP to run within IIS.
+1. Open the "Turn Windows features on or off" utility.
+2. Enable Internet Information Services (IIS) and make sure the CGI feature is also selected. This allows PHP to run within IIS.
 3. After IIS is enabled, download and install the following:
-   - **PHP Manager for IIS** – to easily manage PHP configurations.
-   - **URL Rewrite Module** – to handle friendly URL routing for web applications.
+   - PHP Manager for IIS – to easily manage PHP configurations.
+   - URL Rewrite Module – to handle friendly URL routing for web applications.
 4. Create the directory `C:\PHP`
-5. Download **PHP 7.3.8** and extract the files to the directory `C:\PHP`.
+5. Download PHP 7.3.8 and extract the files to the directory `C:\PHP`.
 6. Once extracted, use **PHP Manager** to register the PHP installation with IIS.
 
 At this point, IIS is fully configured to run PHP scripts, and you're ready to continue setting up osTicket.
@@ -112,18 +112,32 @@ This allows osTicket to complete the setup during the web-based installation.
 <br />
 
 <p>
-<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oJg2JuB.png" height="60%" width="60%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
+Launch the osTicket Setup Page
+
+1. Open a web browser.
+2. Navigate to:  
+   `http://localhost/osTicket`
+3. Fill in the required helpdesk information (e.g., helpdesk name, default email, etc.).
+
+Create the osTicket Database
+
+1. Launch HeidiSQL (located where you extracted the osTicket files).
+2. Connect using your MySQL login credentials.
+3. Right-click your MySQL connection and select Create new → Database.
+4. Name the new database:  
+   `osTicket`
+
+Complete the Installation
+
+1. Return to the osTicket setup page in your browser.
+2. Enter the database name and MySQL credentials when prompted.
+3. Click “Install Now” to complete the setup.
+
+
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
-</p>
-<br />
 
