@@ -31,25 +31,83 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/RqRQhWm.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create your virtual machine that will run osTicket. Launch and log into the system.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/OPDVCFd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Prepare IIS and PHP for osTicket
+
+1. Open the **"Turn Windows features on or off"** utility.
+2. Enable **Internet Information Services (IIS)** and make sure the **CGI** feature is also selected. This allows PHP to run within IIS.
+3. After IIS is enabled, download and install the following:
+   - **PHP Manager for IIS** – to easily manage PHP configurations.
+   - **URL Rewrite Module** – to handle friendly URL routing for web applications.
+4. Create the directory `C:\PHP`
+5. Download **PHP 7.3.8** and extract the files to the directory `C:\PHP`.
+6. Once extracted, use **PHP Manager** to register the PHP installation with IIS.
+
+At this point, IIS is fully configured to run PHP scripts, and you're ready to continue setting up osTicket.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/Lpaxi3b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Download and run the MySQL Installer. During the setup, you’ll be asked to create a username and password. You’ll need these login details later to create the osTicket database and connect to it during the web-based installation.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/GdzrIew.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Run IIS as Administrator.
+
+Use PHP Manager to register PHP by selecting the path:
+`C:\PHP\php-cgi.exe`.
+
+Then, restart IIS by stopping and starting the server to apply the changes.
+
+<br />
+
+<p>
+<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/AtL8O9M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+To make sure PHP and MySQL work correctly, install the Microsoft Visual C++ Redistributable (x86). This is a required support file that helps both programs run on Windows.
+</p>
+<br />
+
