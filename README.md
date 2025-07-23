@@ -138,7 +138,7 @@ Complete the Installation
 </p>
 <br />
 
-<h2>Project Summary</h2>
+### ✅ Summary
 
 This project demonstrates the complete deployment of the osTicket help desk system on a Windows 10 VM in Microsoft Azure, showcasing hands-on experience with:
 
